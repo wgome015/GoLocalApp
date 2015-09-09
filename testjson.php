@@ -15,7 +15,7 @@ if (isset ($_REQUEST['json'])) {
   // //   );
     //Send the original message back.
     $response['request'] = $decoded;
-  }
+  // }
 }
 else {
   $response['status'] = array  (
