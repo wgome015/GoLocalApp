@@ -79,6 +79,7 @@
 		DE8444AB1B9F7C970085DA73 /* StaffRegistration15ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaffRegistration15ViewController.m; sourceTree = "<group>"; };
 		DE8444AD1B9FAB570085DA73 /* StaffRegistration16ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaffRegistration16ViewController.h; sourceTree = "<group>"; };
 		DE8444AE1B9FAB570085DA73 /* StaffRegistration16ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaffRegistration16ViewController.m; sourceTree = "<group>"; };
+		DE8444E91B9FE94E0085DA73 /* notes.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = notes.playground; sourceTree = "<group>"; };
 		DED49C451B97CA0A0091B986 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
 		DED49C461B97CA0A0091B986 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
 		DEE6B8421B9941C200912541 /* StaffRegistration2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaffRegistration2ViewController.h; sourceTree = "<group>"; };
@@ -156,6 +157,7 @@
 				DE6722BE1B968CC600599039 /* Main.storyboard */,
 				DE6722C11B968CC600599039 /* Images.xcassets */,
 				DE6722C31B968CC600599039 /* LaunchScreen.xib */,
+				DE8444E91B9FE94E0085DA73 /* notes.playground */,
 				DE6722B81B968CC600599039 /* GoLocalApp.xcdatamodeld */,
 				DE6722B11B968CC600599039 /* Supporting Files */,
 			);

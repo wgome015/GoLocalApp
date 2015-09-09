@@ -10,7 +10,6 @@
 
 @interface StaffRegistration2ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UIAlertViewDelegate>
 
-
 @property (weak, nonatomic) IBOutlet UITextField *address;
 @property (weak, nonatomic) IBOutlet UITextField *city;
 @property (weak, nonatomic) IBOutlet UITextField *zipcode;

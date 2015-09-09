@@ -25,6 +25,8 @@
     // Do any additional setup after loading the view.
         [self setupTextFields];
         [self setUpTapGesture];
+    
+    [self testDataPassed];//testing
 }//eom
 
 /* verifying the required input fileds */
@@ -75,17 +77,17 @@
 /* submmitting form */
 - (IBAction)submitForm:(id)sender
 {
-//        //verifying the data enter
-//        bool result = [self verifyDataEnter];
-//        if(result)
-//        {
+        //verifying the data enter
+        bool result = [self verifyDataEnter];
+        if(result)
+        {
             //    moving to the next controller
             [self performSegueWithIdentifier:@"staffRegistration8" sender:self];
-//        }
-//        else
-//        {
-//            NSLog(@"missing some/all required fields");
-//        }
+        }
+        else
+        {
+            NSLog(@"missing some/all required fields");
+        }
 }//eom
 
 /*datePicker - runs when the value has been updated */
@@ -148,9 +150,14 @@
         controller.city                     = self.city;
         controller.zipcode                  = self.zipcode;
         controller.stateSelected            = self.stateSelected;
+        controller.djSelected               = self.djSelected;
+        controller.liveBandSelected         = self.liveBandSelected;
+        controller.cateringCompanySelected  = self.cateringCompanySelected;
+        controller.otherServicesSelected    = self.otherServicesSelected;
+
         
-        controller.dob                      = dateOfBirth;
-        controller.gender                   = gender;
+        controller.dob                      = self.dateOfBirth;
+        controller.gender                   = self.gender;
         controller.languages                = self.languages;
         
 //        NSLog(@" sending gender: %s", gender ? "true":"false");
@@ -255,6 +262,110 @@
         return YES;
     }
 
+
+-(void)testDataPassed
+{
+    
+    NSLog(@" ");
+    NSLog(@" ");
+    NSLog(@" *****  Staff Registration| View controller #7 ******");
+    //view controller 1
+    NSLog(@" firstName:       %@", self.firstName);
+    NSLog(@" middleName:      %@", self.middleName);
+    NSLog(@" lastName:        %@", self.lastName);
+    NSLog(@" nickName:        %@", self.nickName);
+    NSLog(@" email:           %@", self.email);
+    NSLog(@" password:        %@", self.password);
+    NSLog(@" cellphone:       %@", self.cellphone);
+    
+    //view controller 2
+    NSLog(@" address:                   %@", self.address);
+    NSLog(@" city:                      %@", self.city);
+    NSLog(@" zipcode:                   %@", self.zipcode);
+    NSLog(@" stateSelected:             %@", self.stateSelected);
+    NSLog(@" djSelected:                %d", self.djSelected);
+    NSLog(@" liveBandSelected:          %d", self.liveBandSelected);
+    NSLog(@" djSelected:                %d", self.djSelected);
+    NSLog(@" cateringCompanySelected:   %d", self.cateringCompanySelected);
+    NSLog(@" otherServicesSelected:     %d", self.otherServicesSelected);
+    
+    //view controller 3 - DJ only
+    
+    NSLog(@" djDescription:     %@", self.djDescription);
+    NSLog(@" djWebsite:         %@", self.djWebsite);
+    NSLog(@" djSocialMedia:     %@", self.djSocialMedia);
+    
+    //view controller 4 - Live Band Only
+    
+    NSLog(@" liveBandDescription:   %@", self.liveBandDescription);
+    NSLog(@" liveBandWebsite:       %@", self.liveBandWebsite);
+    NSLog(@" liveBandSocialMedia:   %@", self.liveBandSocialMedia);
+    
+    //view controller 5 - Catering Company Only
+    NSLog(@" cateringCompanyDescription:    %@", self.cateringCompanyDescription);
+    NSLog(@" cateringCompanyWebsite:        %@", self.cateringCompanyWebsite);
+    NSLog(@" cateringCompanySocialMedia:    %@", self.cateringCompanySocialMedia);
+    
+    //view controller 6
+    NSLog(@" otherServicesDescription:  %@", self.otherServicesDescription);
+    NSLog(@" otherServicesWebsite:      %@", self.otherServicesWebsite);
+    NSLog(@" otherServicesSocialMedia:  %@", self.otherServicesSocialMedia);
+    
+//    //view controller 7
+//    NSLog(@" dob:       %@", self.dob);
+//    NSLog(@" gender:    %d", self.gender);// 0-female 1-male
+//    NSLog(@" languages: %@", self.languages);
+//    
+//    //view controller 8
+//    NSLog(@" ethnicity:     %d", self.ethnicity);//see db legend
+//    NSLog(@" typeOfLicense: %d", self.typeOfLicense);//0-driver 1-commercial
+//    
+//    //view controller 9
+//    NSLog(@" height:            %@", self.height);
+//    NSLog(@" weight:            %@", self.weight);
+//    NSLog(@" hairColor:         %@", self.hairColor);
+//    NSLog(@" eyeColor:          %@", self.eyeColor);
+//    NSLog(@" pantSize:          %@", self.pantSize);
+//    NSLog(@" shoeSize:          %@", self.shoeSize);
+//    NSLog(@" tshirtSize:        %@", self.tshirtSize);
+//    NSLog(@" desiredHourlyRate: %@", self.desiredHourlyRate);
+//    NSLog(@" desiredWeeklyRate: %@", self.desiredWeeklyRate);
+//    NSLog(@" tattoos:           %d", self.tattoos);//0 - no | 1 - yes
+//    NSLog(@" piercings:         %d", self.piercings);//0 - no | 1 - yes
+//    
+//    //view controller 10 - females ONLY
+//    NSLog(@" chestSize: %@", self.chestSize);
+//    NSLog(@" waistSize: %@", self.waistSize);
+//    NSLog(@" hipsSize: %@", self.hipsSize);
+//    NSLog(@" dressSize: %@", self.dressSize);
+//    
+//    //view controller 11
+//    NSLog(@" typeCorporated:        %d", self.typeCorporated);//0-not incorporated| 1- corporated
+//    NSLog(@" ssn:                   %@", self.ssn);//NotIncorporated field
+//    NSLog(@" ein:                   %@", self.ein);         //incorporated field
+//    NSLog(@" businessName:          %@", self.businessName);//incorporated field
+//    NSLog(@" citiesWillingToWork:   %@", self.citiesWillingToWork);
+//    NSLog(@" travel:                %d", self.travel);
+//    NSLog(@" professionalInsurance: %d", self.professionalInsurance);
+//    
+//    
+//    //view controller 14
+//    NSLog(@" directDepositDesired:          %d", self.directDepositDesired);
+//    NSLog(@" DirectDepositRoutingNumber:    %@", self.DirectDepositRoutingNumber);
+//    NSLog(@" DirectDepositAccountNumber:    %@", self.DirectDepositAccountNumber);
+//    
+//    //view controller 15
+//    NSLog(@" isModel:                   %d", self.isModel);
+//    NSLog(@" isBrandAmbassador:         %d", self.isBrandAmbassador);
+//    NSLog(@" isFlyerDistributor:        %d", self.isFlyerDistributor);
+//    NSLog(@" isFieldMarketingManager:   %d", self.isFieldMarketingManager);
+//    NSLog(@" isDancer:                  %d", self.isDancer);
+//    NSLog(@" iswaiterOrWaitress:        %d", self.iswaiterOrWaitress);
+//    NSLog(@" isProductionAssistant:     %d", self.isProductionAssistant);
+//    NSLog(@" isSalesExecutive:          %d", self.isSalesExecutive);
+//    
+    NSLog(@" - - - - - - - - - - - - - ");
+}//eom
 /*
 #pragma mark - Navigation
 
