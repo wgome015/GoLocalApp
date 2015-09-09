@@ -28,7 +28,7 @@ function registerStaff()
       } 
       else //connection to the database establish
       {
-        echo "connected successfully";//testing
+        echo "<p>connected successfully</p>";//testing
         //processing POST request's
         if( $_SERVER["REQUEST_METHOD"] == "POST" )
         {
@@ -58,9 +58,10 @@ function registerStaff()
               $username = stripcslashes($username);
               $username = htmlspecialchars($username);
 
-              echo "username is '".$username."'";
+              echo "<p>username is '".$username."'</p>";
+
               //making sure this is a unique registration
-              $query = "SELECT username from registeredstaff";
+              $query = "SELECT * from registeredstaff";
               $result = mysqli_query($db, $query);
               echo "db result: ".$result;
 
