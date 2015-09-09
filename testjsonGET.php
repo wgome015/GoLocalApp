@@ -1,9 +1,6 @@
 <?php
 if (isset ($_REQUEST['json'])) {
-$decoded = json_decode($_REQUEST['json'], true);
-print_r($decoded);
-
-  // $decoded = json_decode  (stripslashes($_REQUEST['json']), TRUE);
+  $decoded = json_decode  (stripslashes($_REQUEST['json']), TRUE);
   if (is_null  ($decoded)) {
     $response['status'] = array  (
       'type' => 'error',
