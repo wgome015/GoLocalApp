@@ -9,7 +9,7 @@ $testing = false;
     if ($jsondata) {
   
       //cleaing json data
-      $cleanJSONData = stripslashes($data);
+      $cleanJSONData = stripslashes($jsondata);
 
       //converting json to php array
       $decoded = json_decode($cleanJSONData, true);
@@ -21,7 +21,7 @@ $testing = false;
           'type' => 'error',
           'value' => 'Invalid JSON value found',
         );
-        $response['request'] = $jsondata];
+        $response['request'] = $jsondata;
       }
       else  //valid json values found
       {
@@ -55,7 +55,8 @@ $testing = false;
 
   }
   else {
-    $response['status'] = array  (
+    $response['sta
+    tus'] = array  (
       'type' => 'error',
       'value' => 'No JSON value set',
     );
