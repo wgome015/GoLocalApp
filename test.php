@@ -10,6 +10,8 @@
 
   LogInServer();
 
+  registerStaff();
+
 ?>
 
 </body>
