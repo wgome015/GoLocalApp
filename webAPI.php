@@ -62,11 +62,13 @@ function registerStaff()
 
               //making sure this is a unique registration
               $query = "SELECT * from registeredstaff";
+              echo "<p>after query</p>";
               $result = mysqli_query($db, $query);
+              
+              printf("Select returned %d rows.\n", mysqli_num_rows($result));
               echo "db result: ".$result;
-
               /* free result set */
-              $result->close();
+              // $result->close();
 
               //attempting to register
           }
