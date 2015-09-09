@@ -28,6 +28,7 @@ function registerStaff()
       } 
       else //connection to the database establish
       {
+        echo "connected successfully";
         //processing POST request's
         if( $_SERVER["REQUEST_METHOD"] == "POST" )
         {
