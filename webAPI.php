@@ -61,21 +61,36 @@ function registerStaff()
               echo "<p>username is '".$username."'</p>";
 
               //making sure this is a unique registration
-              $query = "SELECT * from registeredstaff";
+              $query = "select * from registeredstaff where username='".$username."'";
               $result = mysqli_query($db, $query);
+
+              // printf("Select returned %d rows.\n", mysqli_num_rows($result));
+
               
-
-              printf("Select returned %d rows.\n", mysqli_num_rows($result));
-              printf("%s\n", mysqli_info($db));
-
               $row = mysqli_fetch_array( $result, MYSQLI_ASSOC );
-              echo "<p>about to print the row</p>";
-              print_r($row);
 
-              /* free result set */
-              // $result->close();
+              //checking there was a result 
+              $rowResult = array_filter($row);
+              if (!empty($rowResult)) {
+                print_r($row);
+                
+                echo "username is NOT unique";
+               
 
-              //attempting to register
+                //attempting to register
+              }
+              else
+              {
+
+                echo "username is unique";
+              }
+
+               //checking username provided is unique
+                $dbUsername = $row['username'];
+
+
+                /* free result set */
+                // $result->close();
           }
             
         }        
