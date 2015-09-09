@@ -149,17 +149,17 @@
 /* submmitting form */
 - (IBAction)submit:(id)sender {
 
-//    //verifying the data enter
-//    bool result = [self verifyDataEnter];
-//    if(result)
-//    {
+    //verifying the data enter
+    bool result = [self verifyDataEnter];
+    if(result)
+    {
         //moving to the next controller
         [self performSegueWithIdentifier:@"staffRegistration2" sender:self];
-//    }
-//    else
-//    {
-//        NSLog(@"missing some/all required fields");
-//    }
+    }
+    else
+    {
+        NSLog(@"missing some/all required fields");
+    }
 }//eom
 
 
@@ -167,13 +167,13 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"staffRegistration2"]){
         StaffRegistration2ViewController *controller = (StaffRegistration2ViewController *)segue.destinationViewController;
-        controller.firstName    = firstName.text;
-        controller.middleName   = middleName.text;
-        controller.lastName     = lastName.text;
-        controller.nickName     = nickName.text;
-        controller.email        = email.text;
-        controller.password     = password.text;
-        controller.cellphone    = cellphone.text;
+        controller.firstName    = self.firstName.text;
+        controller.middleName   = self.middleName.text;
+        controller.lastName     = self.lastName.text;
+        controller.nickName     = self.nickName.text;
+        controller.email        = self.email.text;
+        controller.password     = self.password.text;
+        controller.cellphone    = self.cellphone.text;
     }
 }//eom
 
@@ -313,10 +313,3 @@
 @end
 
 
-//      //printing NSString*
-//    NSLog(@"%@",title);
-//    NSLog(@"%@",message);
-//    NSLog(@"%@",cancelTitle);
-
-//      //printing bool value
-//    NSLog(@" %s", validEmailFormat ? "true" : "false");

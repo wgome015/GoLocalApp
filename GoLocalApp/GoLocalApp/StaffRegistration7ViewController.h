@@ -31,8 +31,9 @@
 - (IBAction)maleSwitchChanged:(id)sender;
 - (IBAction)femaleSwitchChanged:(id)sender;
 
-//PASSED VALUEs FROM PREVIOUS CONTROLLER
-@property (nonatomic)  NSString *firstName;                     //view controller 1
+
+//view controller 1
+@property (nonatomic)  NSString *firstName;
 @property (nonatomic)  NSString *middleName;
 @property (nonatomic)  NSString *lastName;
 @property (nonatomic)  NSString *nickName;
@@ -40,9 +41,36 @@
 @property (nonatomic)  NSString *password;
 @property (nonatomic)  NSString *cellphone;
 
-@property (nonatomic)  NSString *address;                       //view controller 2
+//view controller 2
+@property (nonatomic)  NSString *address;
 @property (nonatomic)  NSString *city;
 @property (nonatomic)  NSString *zipcode;
 @property (nonatomic)  NSString *stateSelected;
+@property (nonatomic)  BOOL djSelected;
+@property (nonatomic)  BOOL liveBandSelected;
+@property (nonatomic)  BOOL cateringCompanySelected;
+@property (nonatomic)  BOOL otherServicesSelected;
+
+//view controller 3 - DJ only
+@property (nonatomic)  NSString *djDescription;
+@property (nonatomic)  NSString *djWebsite;
+@property (nonatomic)  NSString *djSocialMedia;
+
+//view controller 4 - Live Band Only
+@property (nonatomic)  NSString *liveBandDescription;
+@property (nonatomic)  NSString *liveBandWebsite;
+@property (nonatomic)  NSString *liveBandSocialMedia;
+
+
+//view controller 5 - Catering Company Only
+@property (nonatomic)  NSString *cateringCompanyDescription;
+@property (nonatomic)  NSString *cateringCompanyWebsite;
+@property (nonatomic)  NSString *cateringCompanySocialMedia;
+
+//view controller 6
+@property (nonatomic)  NSString *otherServicesDescription;
+@property (nonatomic)  NSString *otherServicesWebsite;
+@property (nonatomic)  NSString *otherServicesSocialMedia;
+
 
 @end

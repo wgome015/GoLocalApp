@@ -29,10 +29,12 @@
     [self setupTextFields];
     [self setUpTapGesture];
     
-    if(djSelected == false){
-        [self determineWhereToGo];
-    }
+//    if(djSelected == false){
+//        [self determineWhereToGo];
+//    }
+
     
+    [self testDataPassed];//testing
 }//eom
 
 
@@ -113,102 +115,102 @@
     if([segue.identifier isEqualToString:@"djToLiveBand"]){
         StaffRegistration4ViewController *controller = (StaffRegistration4ViewController *)segue.destinationViewController;
         
-        controller.firstName                = firstName;                //view controller 1
-        controller.middleName               = middleName;
-        controller.lastName                 = lastName;
-        controller.nickName                 = nickName;
-        controller.email                    = email;
-        controller.password                 = password;                 //view controller 2
-        controller.cellphone                = cellphone;
-        controller.address                  = address;
-        controller.city                     = city;
-        controller.zipcode                  = zipcode;
-        controller.stateSelected            = stateSelected;
+        controller.firstName                = self.firstName;                //view controller 1
+        controller.middleName               = self.middleName;
+        controller.lastName                 = self.lastName;
+        controller.nickName                 = self.nickName;
+        controller.email                    = self.email;
+        controller.password                 = self.password;                 //view controller 2
+        controller.cellphone                = self.cellphone;
+        controller.address                  = self.address;
+        controller.city                     = self.city;
+        controller.zipcode                  = self.zipcode;
+        controller.stateSelected            = self.stateSelected;
         
         
-        controller.djDescription            = djDescription.text;       //view controller 3
-        controller.djWebsite                = djWebsite.text;
-        controller.djSocialMedia            = djSocialMedia.text;
+        controller.djDescription            = self.djDescription.text;       //view controller 3
+        controller.djWebsite                = self.djWebsite.text;
+        controller.djSocialMedia            = self.djSocialMedia.text;
         
-        controller.djSelected               = djSelected;
-        controller.liveBandSelected         = liveBandSelected;
-        controller.cateringCompanySelected  = cateringCompanySelected;
-        controller.otherServicesSelected    = otherServicesSelected;
+        controller.djSelected               = self.djSelected;
+        controller.liveBandSelected         = self.liveBandSelected;
+        controller.cateringCompanySelected  = self.cateringCompanySelected;
+        controller.otherServicesSelected    = self.otherServicesSelected;
     }
     else if([segue.identifier isEqualToString:@"djToCateringCompany"]){
         StaffRegistration5ViewController *controller = (StaffRegistration5ViewController *)segue.destinationViewController;
         
-        controller.firstName                = firstName;                //view controller 1
-        controller.middleName               = middleName;
-        controller.lastName                 = lastName;
-        controller.nickName                 = nickName;
-        controller.email                    = email;
-        controller.password                 = password;                 //view controller 2
-        controller.cellphone                = cellphone;
-        controller.address                  = address;
-        controller.city                     = city;
-        controller.zipcode                  = zipcode;
-        controller.stateSelected            = stateSelected;
+        controller.firstName                = self.firstName;                //view controller 1
+        controller.middleName               = self.middleName;
+        controller.lastName                 = self.lastName;
+        controller.nickName                 = self.nickName;
+        controller.email                    = self.email;
+        controller.password                 = self.password;                 //view controller 2
+        controller.cellphone                = self.cellphone;
+        controller.address                  = self.address;
+        controller.city                     = self.city;
+        controller.zipcode                  = self.zipcode;
+        controller.stateSelected            = self.stateSelected;
         
         
-        controller.djDescription            = djDescription.text;       //view controller 3
-        controller.djWebsite                = djWebsite.text;
-        controller.djSocialMedia            = djSocialMedia.text;
+        controller.djDescription            = self.djDescription.text;       //view controller 3
+        controller.djWebsite                = self.djWebsite.text;
+        controller.djSocialMedia            = self.djSocialMedia.text;
         
-        controller.djSelected               = djSelected;
-        controller.liveBandSelected         = liveBandSelected;
-        controller.cateringCompanySelected  = cateringCompanySelected;
-        controller.otherServicesSelected    = otherServicesSelected;
+        controller.djSelected               = self.djSelected;
+        controller.liveBandSelected         = self.liveBandSelected;
+        controller.cateringCompanySelected  = self.cateringCompanySelected;
+        controller.otherServicesSelected    = self.otherServicesSelected;
     }
     else if([segue.identifier isEqualToString:@"djToOtherServices"]){
         StaffRegistration6ViewController *controller = (StaffRegistration6ViewController *)segue.destinationViewController;
         
-        controller.firstName                = firstName;                //view controller 1
-        controller.middleName               = middleName;
-        controller.lastName                 = lastName;
-        controller.nickName                 = nickName;
-        controller.email                    = email;
-        controller.password                 = password;                 //view controller 2
-        controller.cellphone                = cellphone;
-        controller.address                  = address;
-        controller.city                     = city;
-        controller.zipcode                  = zipcode;
-        controller.stateSelected            = stateSelected;
+        controller.firstName                = self.firstName;                //view controller 1
+        controller.middleName               = self.middleName;
+        controller.lastName                 = self.lastName;
+        controller.nickName                 = self.nickName;
+        controller.email                    = self.email;
+        controller.password                 = self.password;                 //view controller 2
+        controller.cellphone                = self.cellphone;
+        controller.address                  = self.address;
+        controller.city                     = self.city;
+        controller.zipcode                  = self.zipcode;
+        controller.stateSelected            = self.stateSelected;
         
         
-        controller.djDescription            = djDescription.text;       //view controller 3
-        controller.djWebsite                = djWebsite.text;
-        controller.djSocialMedia            = djSocialMedia.text;
+        controller.djDescription            = self.djDescription.text;       //view controller 3
+        controller.djWebsite                = self.djWebsite.text;
+        controller.djSocialMedia            = self.djSocialMedia.text;
         
-        controller.djSelected               = djSelected;
-        controller.liveBandSelected         = liveBandSelected;
-        controller.cateringCompanySelected  = cateringCompanySelected;
-        controller.otherServicesSelected    = otherServicesSelected;
+        controller.djSelected               = self.djSelected;
+        controller.liveBandSelected         = self.liveBandSelected;
+        controller.cateringCompanySelected  = self.cateringCompanySelected;
+        controller.otherServicesSelected    = self.otherServicesSelected;
     }
     else if([segue.identifier isEqualToString:@"djToStaffRegistration11"]){
         StaffRegistration11ViewController *controller = (StaffRegistration11ViewController *)segue.destinationViewController;
         
-        controller.firstName                = firstName;                //view controller 1
-        controller.middleName               = middleName;
-        controller.lastName                 = lastName;
-        controller.nickName                 = nickName;
-        controller.email                    = email;
-        controller.password                 = password;                 //view controller 2
-        controller.cellphone                = cellphone;
-        controller.address                  = address;
-        controller.city                     = city;
-        controller.zipcode                  = zipcode;
-        controller.stateSelected            = stateSelected;
+        controller.firstName                = self.firstName;                //view controller 1
+        controller.middleName               = self.middleName;
+        controller.lastName                 = self.lastName;
+        controller.nickName                 = self.nickName;
+        controller.email                    = self.email;
+        controller.password                 = self.password;                 //view controller 2
+        controller.cellphone                = self.cellphone;
+        controller.address                  = self.address;
+        controller.city                     = self.city;
+        controller.zipcode                  = self.zipcode;
+        controller.stateSelected            = self.stateSelected;
         
         
-        controller.djDescription            = djDescription.text;       //view controller 3
-        controller.djWebsite                = djWebsite.text;
-        controller.djSocialMedia            = djSocialMedia.text;
+        controller.djDescription            = self.djDescription.text;       //view controller 3
+        controller.djWebsite                = self.djWebsite.text;
+        controller.djSocialMedia            = self.djSocialMedia.text;
         
-        controller.djSelected               = djSelected;
-        controller.liveBandSelected         = liveBandSelected;
-        controller.cateringCompanySelected  = cateringCompanySelected;
-        controller.otherServicesSelected    = otherServicesSelected;
+        controller.djSelected               = self.djSelected;
+        controller.liveBandSelected         = self.liveBandSelected;
+        controller.cateringCompanySelected  = self.cateringCompanySelected;
+        controller.otherServicesSelected    = self.otherServicesSelected;
     }
 }//eom
 
@@ -315,6 +317,110 @@
             return YES;
         }
 
+
+-(void)testDataPassed
+{
+    
+    NSLog(@" ");
+    NSLog(@" ");
+    NSLog(@" *****  Staff Registration| View controller #3 ******");
+    //view controller 1
+    NSLog(@" firstName:       %@", self.firstName);
+    NSLog(@" middleName:      %@", self.middleName);
+    NSLog(@" lastName:        %@", self.lastName);
+    NSLog(@" nickName:        %@", self.nickName);
+    NSLog(@" email:           %@", self.email);
+    NSLog(@" password:        %@", self.password);
+    NSLog(@" cellphone:       %@", self.cellphone);
+    
+    //view controller 2
+    NSLog(@" address:                   %@", self.address);
+    NSLog(@" city:                      %@", self.city);
+    NSLog(@" zipcode:                   %@", self.zipcode);
+    NSLog(@" stateSelected:             %@", self.stateSelected);
+    NSLog(@" djSelected:                %d", self.djSelected);
+    NSLog(@" liveBandSelected:          %d", self.liveBandSelected);
+    NSLog(@" djSelected:                %d", self.djSelected);
+    NSLog(@" cateringCompanySelected:   %d", self.cateringCompanySelected);
+    NSLog(@" otherServicesSelected:     %d", self.otherServicesSelected);
+    
+//    //view controller 3 - DJ only
+//    
+//    NSLog(@" djDescription:     %@", self.djDescription);
+//    NSLog(@" djWebsite:         %@", self.djWebsite);
+//    NSLog(@" djSocialMedia:     %@", self.djSocialMedia);
+//    
+//    //view controller 4 - Live Band Only
+//    
+//    NSLog(@" liveBandDescription:   %@", self.liveBandDescription);
+//    NSLog(@" liveBandWebsite:       %@", self.liveBandWebsite);
+//    NSLog(@" liveBandSocialMedia:   %@", self.liveBandSocialMedia);
+//    
+//    //view controller 5 - Catering Company Only
+//    NSLog(@" cateringCompanyDescription:    %@", self.cateringCompanyDescription);
+//    NSLog(@" cateringCompanyWebsite:        %@", self.cateringCompanyWebsite);
+//    NSLog(@" cateringCompanySocialMedia:    %@", self.cateringCompanySocialMedia);
+//    
+//    //view controller 6
+//    NSLog(@" otherServicesDescription:  %@", self.otherServicesDescription);
+//    NSLog(@" otherServicesWebsite:      %@", self.otherServicesWebsite);
+//    NSLog(@" otherServicesSocialMedia:  %@", self.otherServicesSocialMedia);
+//    
+//    //view controller 7
+//    NSLog(@" dob:       %@", self.dob);
+//    NSLog(@" gender:    %d", self.gender);// 0-female 1-male
+//    NSLog(@" languages: %@", self.languages);
+//    
+//    //view controller 8
+//    NSLog(@" ethnicity:     %d", self.ethnicity);//see db legend
+//    NSLog(@" typeOfLicense: %d", self.typeOfLicense);//0-driver 1-commercial
+//    
+//    //view controller 9
+//    NSLog(@" height:            %@", self.height);
+//    NSLog(@" weight:            %@", self.weight);
+//    NSLog(@" hairColor:         %@", self.hairColor);
+//    NSLog(@" eyeColor:          %@", self.eyeColor);
+//    NSLog(@" pantSize:          %@", self.pantSize);
+//    NSLog(@" shoeSize:          %@", self.shoeSize);
+//    NSLog(@" tshirtSize:        %@", self.tshirtSize);
+//    NSLog(@" desiredHourlyRate: %@", self.desiredHourlyRate);
+//    NSLog(@" desiredWeeklyRate: %@", self.desiredWeeklyRate);
+//    NSLog(@" tattoos:           %d", self.tattoos);//0 - no | 1 - yes
+//    NSLog(@" piercings:         %d", self.piercings);//0 - no | 1 - yes
+//    
+//    //view controller 10 - females ONLY
+//    NSLog(@" chestSize: %@", self.chestSize);
+//    NSLog(@" waistSize: %@", self.waistSize);
+//    NSLog(@" hipsSize: %@", self.hipsSize);
+//    NSLog(@" dressSize: %@", self.dressSize);
+//    
+//    //view controller 11
+//    NSLog(@" typeCorporated:        %d", self.typeCorporated);//0-not incorporated| 1- corporated
+//    NSLog(@" ssn:                   %@", self.ssn);//NotIncorporated field
+//    NSLog(@" ein:                   %@", self.ein);         //incorporated field
+//    NSLog(@" businessName:          %@", self.businessName);//incorporated field
+//    NSLog(@" citiesWillingToWork:   %@", self.citiesWillingToWork);
+//    NSLog(@" travel:                %d", self.travel);
+//    NSLog(@" professionalInsurance: %d", self.professionalInsurance);
+//    
+//    
+//    //view controller 14
+//    NSLog(@" directDepositDesired:          %d", self.directDepositDesired);
+//    NSLog(@" DirectDepositRoutingNumber:    %@", self.DirectDepositRoutingNumber);
+//    NSLog(@" DirectDepositAccountNumber:    %@", self.DirectDepositAccountNumber);
+//    
+//    //view controller 15
+//    NSLog(@" isModel:                   %d", self.isModel);
+//    NSLog(@" isBrandAmbassador:         %d", self.isBrandAmbassador);
+//    NSLog(@" isFlyerDistributor:        %d", self.isFlyerDistributor);
+//    NSLog(@" isFieldMarketingManager:   %d", self.isFieldMarketingManager);
+//    NSLog(@" isDancer:                  %d", self.isDancer);
+//    NSLog(@" iswaiterOrWaitress:        %d", self.iswaiterOrWaitress);
+//    NSLog(@" isProductionAssistant:     %d", self.isProductionAssistant);
+//    NSLog(@" isSalesExecutive:          %d", self.isSalesExecutive);
+//    
+    NSLog(@" - - - - - - - - - - - - - ");
+}//eom
 /*
 #pragma mark - Navigation
 
