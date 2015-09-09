@@ -28,7 +28,7 @@ function registerStaff()
       } 
       else //connection to the database establish
       {
-        echo "connected successfully";
+        echo "connected successfully";//testing
         //processing POST request's
         if( $_SERVER["REQUEST_METHOD"] == "POST" )
         {
@@ -42,6 +42,7 @@ function registerStaff()
           if( empty($_POST["username"]))
           {
             $usernameError = "username is required";
+            echo $usernameError;//testing
             $errorOccurred = true;
           }
           else 
@@ -57,10 +58,11 @@ function registerStaff()
               $username = stripcslashes($username);
               $username = htmlspecialchars($username);
 
+              echo "username is '".$username."'";
               //making sure this is a unique registration
               $query = "SELECT username from registeredstaff";
               $result = mysqli_query($db, $query);
-              echo $result;
+              echo "db result: ".$result;
 
               /* free result set */
               $result->close();
