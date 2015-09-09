@@ -66,11 +66,12 @@ function registerStaff()
               
 
               printf("Select returned %d rows.\n", mysqli_num_rows($result));
-              printf("%s\n", $mysqli->info);
+              printf("%s\n", mysqli_info($db));
+
               $row = mysqli_fetch_array( $result, MYSQLI_ASSOC );
               echo "<p>about to print the row</p>";
-              echo $row;
-              
+              print_r($row;
+
               /* free result set */
               // $result->close();
 
