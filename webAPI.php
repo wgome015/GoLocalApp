@@ -2,12 +2,16 @@
 
 
 function LogInServer() {
-  echo "testing";
+  echo "<p>testing</p>";
 
 }
 
 function registerStaff()
 {
+
+  LogInServer();
+
+
       /* error types:
         0 user successfully saved
         -1 un-able to connect to the database
@@ -17,6 +21,7 @@ function registerStaff()
       $errorOccurred = false;
       $passwordError = ""; 
       $usernameError = "";
+      $uniqueUser = false;
 
       //connect to database
       $db = mysqli_connect("localhost", "root", "fall2015", "golocalapp");
@@ -28,7 +33,6 @@ function registerStaff()
       } 
       else //connection to the database establish
       {
-        echo "<p>connected successfully</p>";//testing
         //processing POST request's
         if( $_SERVER["REQUEST_METHOD"] == "POST" )
         {
@@ -36,7 +40,6 @@ function registerStaff()
           // {
           //   $passwordError = "Password is required";
           // }
-
 
           //validated required fields
           if( empty($_POST["username"]))
@@ -58,35 +61,29 @@ function registerStaff()
               $username = stripcslashes($username);
               $username = htmlspecialchars($username);
 
-              echo "<p>username is '".$username."'</p>";
-
-              //making sure this is a unique registration
+              //making sure user is a unique registration
               $query = "select * from registeredstaff where username='".$username."'";
               $result = mysqli_query($db, $query);
-
-              // printf("Select returned %d rows.\n", mysqli_num_rows($result));
-
-              
               $row = mysqli_fetch_array( $result, MYSQLI_ASSOC );
-
-              //checking there was a result 
               $rowResult = array_filter($row);
-              if (!empty($rowResult)) {
+              if (empty($rowResult)) {
+
+                $uniqueUser = true;
+
                 print_r($row);
-                
-                echo "username is NOT unique";
+                echo "<p>username is unique</p>";
                
 
                 //attempting to register
+                // $dbUsername = $row['username'];
+                // printf("Select returned %d rows.\n", mysqli_num_rows($result));
+              
+
               }
               else
               {
-
-                echo "username is unique";
+                $errorOccurred= true; //user is NOT unique
               }
-
-               //checking username provided is unique
-                $dbUsername = $row['username'];
 
 
                 /* free result set */
@@ -97,6 +94,12 @@ function registerStaff()
       }//eo-connection to DB
 
       //sending reply back
+      
+          if($errorOccurred)
+          {
+            echo "<p>error occurred </p>";
+
+          }
 
 
 }//eom
