@@ -19,7 +19,7 @@ function registerStaff()
       $usernameError = "";
 
       //connect to database
-      $db = mysqli_connect("localhost", "root", "root", "golocalapp");
+      $db = mysqli_connect("localhost", "root", "fall2015", "golocalapp");
 
       if( !$db )//un-able to connect to the database
       {
