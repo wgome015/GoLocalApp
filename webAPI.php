@@ -70,7 +70,7 @@ function registerStaff()
 
               $row = mysqli_fetch_array( $result, MYSQLI_ASSOC );
               echo "<p>about to print the row</p>";
-              print_r($row;
+              print_r($row);
 
               /* free result set */
               // $result->close();
